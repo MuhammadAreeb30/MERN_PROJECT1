@@ -3,6 +3,7 @@ const router = express.Router();
 require("../db/connection");
 const User = require("../models/userSchema");
 const bcrypt = require("bcrypt");
+const authenticate = require("../middleware/authenticate");
 
 router.get("/", (req, res) => {
   res.send("Home Page router");
@@ -65,9 +66,9 @@ router.post("/signin", async (req, res) => {
     const emailExist = await User.findOne({ email: email });
     if (emailExist) {
       const match = await bcrypt.compare(password, emailExist.password);
-       token = await emailExist.generateAuthToken();
-       console.log(token);
-       res.cookie("jwtoken", token, {
+      token = await emailExist.generateAuthToken();
+      //  console.log(token);
+      res.cookie("jwtoken", token, {
         expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
       });
@@ -82,6 +83,45 @@ router.post("/signin", async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+// about ka page
+router.get("/about", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+// get user data for contact & home
+router.get("/getdata", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+// contact form data
+router.post("/contact", authenticate, async (req, res) => {
+  try {
+    const { name, email, phone, message } = req.body;
+    if (!name || !email || !phone || !message) {
+      res.json({ error: "plz fill the form properly" });
+    }
+    const userContact = await User.findOne({ _id: req.userID });
+    if (userContact) {
+      const userMessage = await userContact.addMessage(
+        name,
+        email,
+        phone,
+        message
+      );
+      await userContact.save();
+      res.status(201).json({ message: "your message send" });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+// logout
+router.get("/logout", (req, res) => {
+  res.clearCookie("jwtoken", { path: "/" });
+  // res.cookie("jwtoken", "", { expires: new Date(0), httpOnly: true, sameSite: "None", secure: true });
 });
 
 module.exports = router;

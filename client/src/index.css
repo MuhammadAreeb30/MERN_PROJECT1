@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f8f9fa;
+}
+
+/* signup page css start  */
+
+.signup {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-content {
+  width: 60vw;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.register-form {
+  margin-top: 3rem;
+}
+
+.form-group {
+  width: 19rem;
+  margin-top: 1.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+}
+
+label {
+  display: flex;
+  margin: 0;
+}
+
+.form-group input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 0.8rem;
+}
+
+.register-btn {
+  margin-top: 1.5rem;
+}
+
+.signup-btn {
+  color: #fff;
+  background-color: rgb(6, 122, 239);
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.signup-btn:hover {
+  transform: scale(0.9);
+}
+
+.signup-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-image .signup-img {
+  width: 22rem;
+  height: 18rem;
+}
+
+.signup-img-link {
+  color: #1d1d1d;
+}
+
+.signup-img-link:hover {
+  color: #000;
+}
+
+/* login css start */
+
+.signin {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-content {
+  width: 60vw;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.signin-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signin-image .signin-img {
+  width: 20rem;
+  height: 15rem;
+  display: inline-block;
+}
+
+/* contact page css start */
+
+.contact-page {
+  width: 100vw;
+  height: 90vh;
+}
+
+.contact-main-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info {
+  width: 35rem;
+  border: 1px solid #bababa;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.3rem;
+  padding: 1rem 3rem;
+}
+
+p {
+  margin: 0;
+}
+
+.contact_icon {
+  font-size: 1.6rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-content h3 {
+  font-size: 1.1rem;
+}
+
+.contact-form-container {
+  width: 80vw;
+  height: auto;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 600;
+}
+
+#contact-form {
+  width: 80%;
+}
+
+.contact-form-div {
+  gap: 2rem;
+}
+
+.form-input {
+  width: 100%;
+  height: 55px;
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: 1px solid #8d8d8d;
+}
+
+.form-input:focus {
+  border: 2px solid #000000;
+}
+
+.text-feild .form-input {
+  margin: 2rem 0;
+  height: 200px;
+}
+
+.contact-button button {
+  height: 55px;
+}
+
+/* home page css start */
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 92.4vh;
+  background: rgb(86, 165, 255);
+  background: linear-gradient(90deg, rgba(91, 167, 255, 0.902) 50%, rgba(241, 245, 246, 0.8324579831932774) 50%);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(8, 0, 255);
+}
+
+/* about page css start */
+
+.about-page {
+  width: 100vw;
+  height: 92.3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  width: 70vw;
+  height: auto;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 5rem;
+}
+
+.profile-img img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.profile-head h6 {
+  color: rgb(0, 68, 255);
+}
+
+.profile-head span {
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #636363;
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: 600;
+  color: #000;
+  border-bottom: 3px solid rgb(0, 76, 255);
+}
+
+.edit-btn {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-weight: 400;
+  color: #636363;
+  cursor: pointer;
+}
+
+.work-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.work-link-heading {
+  font-weight: 600;
+  color: #000;
+}
+
+.work-link {
+  color: #000;
+  font-weight: 400;
+}
+
+.work-link:hover{
+  color: #000;
+}
+
+.ans{
+  color: rgb(8, 0, 255);
+}
+
+/* ========================= Error Page css start ========================== */
+
+.Error-section {
+  padding: 9rem 0;
+  text-align: center;
+}
+
+.Error-section h2 {
+  font-size: 10rem;
+}
+
+.Error-section h3 {
+  font-size: 4.2rem;
+}
+
+.Error-section p {
+  margin: 2rem 0;
+}
+
+/* navbar css */
+
+.navbar{
+  padding: 0.45rem 3rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
